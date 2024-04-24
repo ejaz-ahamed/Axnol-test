@@ -80,7 +80,12 @@ class LoginPage extends HookConsumerWidget {
                           )));
                     },
                     text: isLoading.value
-                        ? const CircularProgressIndicator()
+                        ? const SizedBox(
+                            height: 32,
+                            width: 32,
+                            child: CircularProgressIndicator(
+                              color: Colors.white,
+                            ))
                         : const Text('Sign In')),
                 const Expanded(child: SizedBox()),
                 const Row(
